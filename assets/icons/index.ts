@@ -1,0 +1,11 @@
+export { default as CartIcon } from "./ic-cart.svg";
+export { default as HeartIcon } from "./ic-heart.svg";
+export { default as SearchIcon } from "./ic-search.svg";
+export { default as QrCodeFooter } from "./qr-code-footer.svg";
+export { default as GooglePlayIcon } from "./gg-play.svg";
+export { default as AppStoreIcon } from "./ic-app-store.svg";
+export { default as FacebookIcon } from "./ic-facebook.svg";
+export { default as TwitterIcon } from "./ic-twitter.svg";
+export { default as InstagramIcon } from "./ic-instagram.svg";
+export { default as LinkedInIcon } from "./ic-linkedIn.svg";
+export { default as SendIcon } from "./ic-send.svg";
