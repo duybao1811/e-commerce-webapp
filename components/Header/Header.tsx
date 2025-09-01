@@ -1,11 +1,34 @@
+"use client";
 import React from "react";
 import Link from "next/link";
 import Logo from "@/assets/images/logo.svg";
 import Image from "next/image";
 import InputCustom from "@/components/Input/Input";
 import { SearchIcon } from "@/assets/icons";
+import clsx from "clsx";
+import { usePathname } from "next/navigation";
 
 const Header = () => {
+  const pathname = usePathname();
+  const items = [
+    {
+      label: "Home",
+      href: "/",
+    },
+    {
+      label: "Contact",
+      href: "/contact",
+    },
+    {
+      label: "About",
+      href: "/about",
+    },
+    {
+      label: "Sign Up",
+      href: "/sign-up",
+    },
+  ];
+
   return (
     <header
       className={
@@ -16,10 +39,15 @@ const Header = () => {
         <Image className={"w-[118px] h-[24px]"} src={Logo} alt={"logo"} />
       </Link>
       <div className={"flex items-center justify-between gap-12"}>
-        <Link href={"/"}>Home</Link>
-        <Link href={"/"}>Contact</Link>
-        <Link href={"/"}>About</Link>
-        <Link href={"/"}>Sign Up</Link>
+        {items.map((item) => (
+          <Link
+            href={item.href}
+            key={item.label}
+            className={clsx({ "border-b": item.href === pathname })}
+          >
+            {item.label}
+          </Link>
+        ))}
       </div>
 
       <InputCustom

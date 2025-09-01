@@ -15,11 +15,6 @@ const eslintConfig = [
   {
     ignores: ["node_modules/**", ".next/**", "out/**", "build/**", "next-env.d.ts"],
   },
-  {
-    rules: {
-      "prettier/prettier": "error",
-    },
-  },
   prettier,
 ];
 
