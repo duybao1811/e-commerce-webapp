@@ -23,3 +23,4 @@ export { default as OutlineStarIcon } from "./ic-star-outline.svg";
 export { default as DeliveryIcon } from "./ic-delivery.svg";
 export { default as CustomerServiceIcon } from "./ic-customer-service.svg";
 export { default as SecureIcon } from "./ic-secure.svg";
+export { default as GoogleIcon } from "./ic-google.svg";
