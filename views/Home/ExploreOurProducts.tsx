@@ -32,7 +32,7 @@ const ExploreOurProducts = () => {
     >
       <div className={"grid grid-cols-5 gap-x-8 gap-y-[60px]"}>
         <ProductCard
-          image={ProductExampleImage}
+          image={ProductExampleImage as unknown as string}
           name={"The north coat"}
           price={260}
           oldPrice={300}
@@ -40,7 +40,7 @@ const ExploreOurProducts = () => {
           totalRating={65}
         />
         <ProductCard
-          image={ProductExampleImage}
+          image={ProductExampleImage as unknown as string}
           name={"The north coat"}
           price={260}
           oldPrice={300}
@@ -48,7 +48,7 @@ const ExploreOurProducts = () => {
           totalRating={65}
         />
         <ProductCard
-          image={ProductExampleImage}
+          image={ProductExampleImage as unknown as string}
           name={"The north coat"}
           price={260}
           oldPrice={300}
@@ -56,7 +56,7 @@ const ExploreOurProducts = () => {
           totalRating={65}
         />
         <ProductCard
-          image={ProductExampleImage}
+          image={ProductExampleImage as unknown as string}
           name={"The north coat"}
           price={260}
           oldPrice={300}
@@ -64,7 +64,7 @@ const ExploreOurProducts = () => {
           totalRating={65}
         />
         <ProductCard
-          image={ProductExampleImage}
+          image={ProductExampleImage as unknown as string}
           name={"The north coat"}
           price={260}
           oldPrice={300}
@@ -72,7 +72,7 @@ const ExploreOurProducts = () => {
           totalRating={65}
         />
         <ProductCard
-          image={ProductExampleImage}
+          image={ProductExampleImage as unknown as string}
           name={"The north coat"}
           price={260}
           oldPrice={300}
@@ -80,7 +80,7 @@ const ExploreOurProducts = () => {
           totalRating={65}
         />
         <ProductCard
-          image={ProductExampleImage}
+          image={ProductExampleImage as unknown as string}
           name={"The north coat"}
           price={260}
           oldPrice={300}
@@ -88,7 +88,7 @@ const ExploreOurProducts = () => {
           totalRating={65}
         />
         <ProductCard
-          image={ProductExampleImage}
+          image={ProductExampleImage as unknown as string}
           name={"The north coat"}
           price={260}
           oldPrice={300}
@@ -96,7 +96,7 @@ const ExploreOurProducts = () => {
           totalRating={65}
         />
         <ProductCard
-          image={ProductExampleImage}
+          image={ProductExampleImage as unknown as string}
           name={"The north coat"}
           price={260}
           oldPrice={300}
@@ -104,7 +104,7 @@ const ExploreOurProducts = () => {
           totalRating={65}
         />
         <ProductCard
-          image={ProductExampleImage}
+          image={ProductExampleImage as unknown as string}
           name={"The north coat"}
           price={260}
           oldPrice={300}

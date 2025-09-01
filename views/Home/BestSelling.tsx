@@ -13,7 +13,7 @@ const BestSelling = () => {
     >
       <div className={"grid grid-cols-5 gap-8"}>
         <ProductCard
-          image={ProductExampleImage}
+          image={ProductExampleImage as unknown as string}
           name={"The north coat"}
           price={260}
           oldPrice={300}
@@ -21,7 +21,7 @@ const BestSelling = () => {
           totalRating={65}
         />
         <ProductCard
-          image={ProductExampleImage}
+          image={ProductExampleImage as unknown as string}
           name={"The north coat"}
           price={260}
           oldPrice={300}
@@ -29,7 +29,7 @@ const BestSelling = () => {
           totalRating={65}
         />
         <ProductCard
-          image={ProductExampleImage}
+          image={ProductExampleImage as unknown as string}
           name={"The north coat"}
           price={260}
           oldPrice={300}
@@ -37,7 +37,7 @@ const BestSelling = () => {
           totalRating={65}
         />
         <ProductCard
-          image={ProductExampleImage}
+          image={ProductExampleImage as unknown as string}
           name={"The north coat"}
           price={260}
           oldPrice={300}
@@ -45,7 +45,7 @@ const BestSelling = () => {
           totalRating={65}
         />
         <ProductCard
-          image={ProductExampleImage}
+          image={ProductExampleImage as unknown as string}
           name={"The north coat"}
           price={260}
           oldPrice={300}
