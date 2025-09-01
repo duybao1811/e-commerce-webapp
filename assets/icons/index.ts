@@ -24,3 +24,7 @@ export { default as DeliveryIcon } from "./ic-delivery.svg";
 export { default as CustomerServiceIcon } from "./ic-customer-service.svg";
 export { default as SecureIcon } from "./ic-secure.svg";
 export { default as GoogleIcon } from "./ic-google.svg";
+export { default as ShopIcon } from "./ic-shop.svg";
+export { default as SaleIcon } from "./ic-sale.svg";
+export { default as ShoppingBagIcon } from "./ic-shopping-bag.svg";
+export { default as MoneyBagIcon } from "./ic-moneybag.svg";

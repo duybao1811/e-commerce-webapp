@@ -17,11 +17,11 @@ const Header = () => {
     },
     {
       label: "Contact",
-      href: "/",
+      href: "/contact",
     },
     {
       label: "About",
-      href: "/",
+      href: "/about",
     },
     {
       label: "Sign Up",
