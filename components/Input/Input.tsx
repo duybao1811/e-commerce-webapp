@@ -7,6 +7,10 @@ interface InputProps extends React.ComponentPropsWithoutRef<"input"> {
   rightIcon?: React.ReactNode;
   containerClassName?: string;
   className?: string;
+  required?: boolean;
+  label?: string;
+  id?: string;
+  variant?: "default" | "outlined";
 }
 
 const InputCustom = ({
@@ -14,28 +18,48 @@ const InputCustom = ({
   rightIcon,
   className,
   containerClassName,
+  required,
+  label,
+  id,
+  variant = "default",
   ...props
 }: InputProps) => {
   return (
-    <div
-      className={clsx(
-        "relative flex items-center rounded border border-transparent bg-secondary",
-        containerClassName,
-      )}
-    >
-      {leftIcon && <span className="absolute left-3 flex items-center">{leftIcon}</span>}
-
-      <Input
-        {...props}
+    <div>
+      {label ? (
+        <label htmlFor={id} className={"mb-2 block"}>
+          {label} {required ? <span className="text-secondary2">*</span> : null}
+        </label>
+      ) : null}
+      <div
         className={clsx(
-          "text-text2 text-xs w-full rounded-2xl border-none bg-transparent px-5 py-2 placeholder-gray-400 focus:outline-none placeholder:opacity-50",
-          leftIcon ? "pl-12" : "",
-          rightIcon ? "pr-12" : "",
-          className,
+          "relative flex items-center rounded",
+          {
+            "border border-transparent bg-secondary": variant === "default",
+            "border border-text2": variant === "outlined",
+          },
+          containerClassName,
         )}
-      />
+      >
+        {leftIcon && <span className="absolute left-3 flex items-center">{leftIcon}</span>}
 
-      {rightIcon && <span className="absolute right-3 flex items-center">{rightIcon}</span>}
+        <Input
+          {...props}
+          id={id}
+          className={clsx(
+            "text-text2 w-full border-none bg-transparent px-5 focus:outline-none ",
+            leftIcon ? "pl-12" : "",
+            rightIcon ? "pr-12" : "",
+            {
+              "placeholder-gray-400 placeholder:opacity-50 h-[50px]": variant === "default",
+              "placeholder-text2 placeholder:opacity-50 h-[56px]": variant === "outlined",
+            },
+            className,
+          )}
+        />
+
+        {rightIcon && <span className="absolute right-3 flex items-center">{rightIcon}</span>}
+      </div>
     </div>
   );
 };

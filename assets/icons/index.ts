@@ -28,3 +28,7 @@ export { default as ShopIcon } from "./ic-shop.svg";
 export { default as SaleIcon } from "./ic-sale.svg";
 export { default as ShoppingBagIcon } from "./ic-shopping-bag.svg";
 export { default as MoneyBagIcon } from "./ic-moneybag.svg";
+export { default as BKashIcon } from "./ic-Bkash.svg";
+export { default as VisaIcon } from "./ic-visa.svg";
+export { default as MastercardIcon } from "./ic-mastercard.svg";
+export { default as NagadIcon } from "./ic-nagad.svg";

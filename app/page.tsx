@@ -7,7 +7,7 @@ import Services from "@/views/Home/Services";
 
 const HomePage = () => {
   return (
-    <div className={"flex flex-col gap-[70px] px-32 pt-20 pb-30"}>
+    <div className={"flex flex-col gap-[70px] container-custom pt-20 pb-30"}>
       <Categories />
       <div className={"divider"} />
       <BestSelling />

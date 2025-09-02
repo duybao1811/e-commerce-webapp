@@ -53,3 +53,8 @@ body {
   opacity: 30%;
   background-color: var(--color-text1);
 }
+
+.container-custom {
+  margin: auto;
+  max-width: 1440px;
+}
