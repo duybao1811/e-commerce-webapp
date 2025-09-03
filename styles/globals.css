@@ -58,3 +58,25 @@ body {
   margin: auto;
   max-width: 1440px;
 }
+
+.counter-container {
+  display: flex;
+  font-size: 5rem;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+  height: 1.2em;
+}
+
+.digit-wrapper {
+  position: relative;
+  width: 0.7em;
+  height: 100%;
+  overflow: hidden;
+}
+
+.digit {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+}
