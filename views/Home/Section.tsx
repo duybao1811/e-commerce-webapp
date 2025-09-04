@@ -2,7 +2,7 @@ import React from "react";
 
 interface SectionProps {
   title: string;
-  subTitle?: string;
+  subTitle?: string | React.ReactNode;
   children: React.ReactNode;
   actionButton?: React.ReactNode;
 }
@@ -15,7 +15,10 @@ const Section = ({ title, subTitle, children, actionButton }: SectionProps) => {
         <p className="font-semibold text-secondary2">{title}</p>
       </div>
       <div className="flex justify-between items-center">
-        <h2 className="text-4xl font-semibold text-text2">{subTitle}</h2>
+        {typeof subTitle === "string" ? (
+          <h2 className="text-4xl font-semibold text-text2">{subTitle}</h2>
+        ) : null}
+        {typeof subTitle !== "string" ? subTitle : null}
         {actionButton}
       </div>
       <div className="mt-[60px]">{children}</div>
