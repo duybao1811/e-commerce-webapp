@@ -7,7 +7,7 @@ interface Props {
   duration?: number;
 }
 
-const AnimateNumber = ({ value, height = 32, duration = 0.8 }: Props) => {
+const AnimateNumber = ({ value, height = 30, duration = 0.8 }: Props) => {
   return (
     <div style={{ position: "relative", height: height, overflow: "hidden" }}>
       <AnimatePresence initial={false}>

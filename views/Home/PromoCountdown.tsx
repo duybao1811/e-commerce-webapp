@@ -16,25 +16,25 @@ const PromoCountdown = () => {
     <div className={"flex items-center gap-4"}>
       <div className={classNameItem}>
         <p className={"font-semibold w-5"}>
-          <AnimateNumber value={padStart(days, 2)} height={24} duration={0.5} />
+          <AnimateNumber value={padStart(days, 2)} height={24} />
         </p>
         <p className={"text-xs"}>Days</p>
       </div>
       <div className={classNameItem}>
         <p className={"font-semibold w-5"}>
-          <AnimateNumber value={padStart(hours, 2)} height={24} duration={0.5} />
+          <AnimateNumber value={padStart(hours, 2)} height={24} />
         </p>
         <p className={"text-xs"}>Hours</p>
       </div>
       <div className={classNameItem}>
         <p className={"font-semibold w-5"}>
-          <AnimateNumber value={padStart(minutes, 2)} height={24} duration={0.5} />
+          <AnimateNumber value={padStart(minutes, 2)} height={24} />
         </p>
         <p className={"text-xs"}>Minutes</p>
       </div>
       <div className={classNameItem}>
         <p className={"font-semibold w-5"}>
-          <AnimateNumber value={padStart(seconds, 2)} height={24} duration={0.5} />
+          <AnimateNumber value={padStart(seconds, 2)} height={24} />
         </p>
         <p className={"text-xs"}>Seconds</p>
       </div>

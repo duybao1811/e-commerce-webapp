@@ -16,16 +16,12 @@ interface ICountdown {
 }
 
 const useCountdownTimer = ({ day = 0, hour = 0, minute = 0, second = 0 }: IProps) => {
-  const now = new Date();
+  const startTime = new Date().getTime();
 
-  const targetDate = new Date(
-    now.getFullYear(),
-    now.getMonth(),
-    now.getDate() + day,
-    now.getHours() + hour,
-    now.getMinutes() + minute,
-    now.getSeconds() + second,
-  ).getTime();
+  const totalMilliseconds =
+    day * 24 * 60 * 60 * 1000 + hour * 60 * 60 * 1000 + minute * 60 * 1000 + second * 1000;
+
+  const targetDate = startTime + totalMilliseconds;
 
   const [countDown, setCountDown] = useState<ICountdown>({
     days: day,
