@@ -1,5 +1,5 @@
-'use client'
-import { useState, useEffect } from 'react';
+"use client";
+import { useState, useEffect } from "react";
 
 interface IProps {
   day?: number;
@@ -15,12 +15,7 @@ interface ICountdown {
   seconds: number;
 }
 
-const useCountdownTimer = ({
- day = 0,
- hour = 0,
- minute = 0,
- second = 0,
-}: IProps) => {
+const useCountdownTimer = ({ day = 0, hour = 0, minute = 0, second = 0 }: IProps) => {
   const now = new Date();
 
   const targetDate = new Date(
@@ -33,10 +28,10 @@ const useCountdownTimer = ({
   ).getTime();
 
   const [countDown, setCountDown] = useState<ICountdown>({
-    days: 0,
-    hours: 0,
-    minutes: 0,
-    seconds: 0,
+    days: day,
+    hours: hour,
+    minutes: minute,
+    seconds: second,
   });
 
   useEffect(() => {
