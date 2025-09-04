@@ -1,34 +1,29 @@
-import React from 'react';
-import { AnimatePresence, motion } from 'framer-motion';
+import React from "react";
+import { AnimatePresence, motion } from "framer-motion";
 
-const AnimateNumber = ({ value }) => {
+interface Props {
+  value: string | number;
+  height?: number;
+  duration?: number;
+}
+
+const AnimateNumber = ({ value, height = 32, duration = 0.8 }: Props) => {
   return (
-    <div style={{
-      display: 'flex',
-      fontSize: '8rem',
-      fontWeight: 'bold',
-      height: '10rem',
-      width: '10rem',
-      overflow: 'hidden',
-      position: 'relative',
-      justifyContent: 'center',
-      alignItems: 'center',
-      color: '#000000'
-    }}>
+    <div style={{ position: "relative", height: height, overflow: "hidden" }}>
       <AnimatePresence initial={false}>
-        <motion.div
+        <motion.span
           key={value}
-          initial={{ y: '100%' }}
-          animate={{ y: '0%' }}
-          exit={{ y: '-100%' }}
-          transition={{ duration: 0.5, ease: 'easeInOut' }}
-          style={{ position: 'absolute', width: 100, height: '100%', zIndex: 100 }}
+          initial={{ y: "100%" }}
+          animate={{ y: "0%" }}
+          exit={{ y: "-100%" }}
+          transition={{ duration: duration, ease: "easeInOut" }}
+          style={{ position: "absolute", top: 0, left: 0 }}
         >
           {value}
-        </motion.div>
+        </motion.span>
       </AnimatePresence>
     </div>
   );
 };
 
-export default AnimateNumber
+export default AnimateNumber;

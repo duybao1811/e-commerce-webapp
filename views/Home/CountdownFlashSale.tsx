@@ -2,6 +2,7 @@
 import React from "react";
 import useCountdownTimer from "@/lib/hooks/useCountdownTimer";
 import { padStart } from "@/lib/helpers";
+import AnimateNumber from "@/components/Animation/AnimateNumber";
 
 const CountdownFlashSale = () => {
   const { days, minutes, seconds, hours } = useCountdownTimer({
@@ -16,22 +17,30 @@ const CountdownFlashSale = () => {
       <div className={"flex items-center gap-4"}>
         <div className={"flex flex-col gap-1 w-12"}>
           <p className={"text-xs font-medium"}>Days</p>
-          <p className={"font-bold text-3xl"}>{padStart(days, 2)}</p>
+          <p className={"font-bold text-3xl"}>
+            <AnimateNumber value={padStart(days, 2)} />
+          </p>
         </div>
         <p className={"text-hover-button font-bold text-2xl relative top-2"}>:</p>
         <div className={"flex flex-col gap-1 w-12"}>
           <p className={"text-xs font-medium"}>Hours</p>
-          <p className={"font-bold text-3xl"}>{padStart(hours, 2)}</p>
+          <p className={"font-bold text-3xl"}>
+            <AnimateNumber value={padStart(hours, 2)} />
+          </p>
         </div>
         <p className={"text-hover-button font-bold text-2xl relative top-2"}>:</p>
         <div className={"flex flex-col gap-1 w-12"}>
           <p className={"text-xs font-medium"}>Minutes</p>
-          <p className={"font-bold text-3xl"}>{padStart(minutes, 2)}</p>
+          <p className={"font-bold text-3xl"}>
+            <AnimateNumber value={padStart(minutes, 2)} />
+          </p>
         </div>
         <p className={"text-hover-button font-bold text-2xl relative top-2"}>:</p>
         <div className={"flex flex-col gap-1 w-12"}>
           <p className={"text-xs font-medium"}>Seconds</p>
-          <p className={"font-bold text-3xl"}>{padStart(seconds, 2)}</p>
+          <p className={"font-bold text-3xl"}>
+            <AnimateNumber value={padStart(seconds, 2)} />
+          </p>
         </div>
       </div>
     </div>
