@@ -17,6 +17,7 @@ const ButtonCustom: React.FC<ButtonProps> = ({
       className={clsx(
         "px-12 py-4 rounded-sm font-medium cursor-pointer",
         variant === "primary" && "bg-button2 text-text hover:opacity-80 ",
+        variant === "secondary" && "bg-button1 text-text hover:opacity-80 ",
         variant === "outline" && "border border-button/40 hover:opacity-80",
         className,
       )}
